@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-lg-5">
+
+        <a href="#" class="navbar-brand" onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'});">
+            Tarefas
+        </a>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portifólio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                <li class="nav-item "><a class="nav-link"></a></li>
+                {% if request.user.is_authenticated %}
+                <li class="nav-item nav-item-logged-user"><a class="nav-link" href="{% url 'todo:list' %}">Minhas
+                        Tarefas</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'authentication:logon' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+</nav>

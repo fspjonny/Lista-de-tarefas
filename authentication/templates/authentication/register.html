@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Tarefas | Registre-se
+{% endblock %}
+
+
+{% block main %}
+<div class="form-registration">
+    <div class="body-fields">
+        <h1 class="title-text pt-3 text-center">Registre-se agora</h1>
+        {% include 'parts/form.html' %}
+    </div>    
+</div>
+
+<div class="grid-navigation">
+    <a class="navigation-button" href="{% url 'home:index' %}"><i class="fa-solid fa-circle-arrow-left"></i></a> 
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+<div class="form-body justify-content-center">
+    <form class="global-form" action="{{form_action}}" method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+
+        {{ field }}
+
+        {{ field.errors }}
+
+        {% endfor %}
+
+        <button class="button-form-solid full" type="submit"><i class="fa-solid fa-address-card"></i> Cadastrar</button>
+    </form>
+</div>

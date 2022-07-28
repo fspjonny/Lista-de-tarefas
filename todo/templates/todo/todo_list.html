@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Tarefas | Lista{% endblock %}
+
+{% block main %}
+<div class="header-tasklist">
+    <div class="title-todo">Tarefas</div>
+
+    <div class="form-adding">
+        <form class="form-adding-list" action="{% url 'todo:create' %}" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            {{field}}
+            {% endfor %}
+        <button type="submit">Adicionar</button>
+        </form>
+    </div>
+
+    <div class="logged-user">
+        <p>Usuário</p>
+        {% if request.user.is_authenticated %}
+        <p>{{request.user.first_name}}</p>
+        {% endif %}
+    </div>
+    
+    <div class="logout-user" >
+        <!--Evitar link malicioso -->
+        <form action="{% url 'authentication:logout'%}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="username" value="{{request.user.username}}">
+        <button type="submit" class="logout-plaintext-buttom">Sair <i class="fa-solid fa-person-walking-arrow-right"></i></button>
+        </form>
+    </div>
+
+    <div class="user-settings" >
+        <a href="{% url 'authentication:settings'%}">
+            <i class="fa-solid fa-user-gear"></i>
+            <p>Configurações</p>
+        </a>
+    </div>
+
+</div>
+
+<div class="list-todo">
+    {% include 'parts/messages.html' %}
+    
+    {% if not lista %}
+    <div class="not-todo">    
+        <div class="not-todo-message">
+        <p><i class="fa-solid fa-circle-exclamation"></i></p>
+        <p>Você ainda não possui tarefas cadastradas!</p>
+        </div>
+
+        <div class="grid-navigation">
+            <a class="navigation-button" href="{% url 'home:index' %}"><i class="fa-solid fa-circle-arrow-left"></i></a> 
+        </div>
+    </div>
+
+    {% else %}
+
+    <div class="container mt-3">
+        <!-- Card's task -->
+        <div class="list-grid">
+            {% for item in lista %}
+                <div class="card">
+                    {% if item.concluida %}
+                    <div class="card-header card-header-red">{{item.data_de_criacao}}</div>
+                    {% else %}
+                    <div class="card-header card-header-green">{{item.data_de_criacao}}</div>
+                    {% endif %}
+                    <div class="card-body">
+                        {% if item.concluida %}
+                        <div class="card-text card-text-body-red">{{item.tarefa}}</div>
+                        {% else %}
+                        <div class="card-text card-text-body-green">{{item.tarefa}}</div>
+                        {% endif %}
+                        <div class="card-actions">
+                            {% if item.concluida %}
+                            <a class="buttom card-actions-red" href="{% url 'todo:update' item.id %}">Reabrir tarefa</a>
+                            {% else %}
+                            <a class="buttom card-actions-green" href="{% url 'todo:update' item.id %}">Concluir</a>
+                            {% endif %}
+                            
+                            {% if not item.concluida %}
+                            <!-- não excluir se tarefa ainda está em aberto -->
+                            {% else %}
+                            <a class="buttom card-actions-red" href="{% url 'todo:delete' item.id %}" onclick="return confirm('Quer mesmo excluir esta tarefa?');">
+                                Excluir
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="grid-navigation">
+            <a class="navigation-button" href="{% url 'home:index' %}"><i class="fa-solid fa-circle-arrow-left"></i></a> 
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

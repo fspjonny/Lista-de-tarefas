@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Tarefas | Login
+{% endblock %}
+
+
+{% block main %}
+<div class="logon-user">
+    <h1 class="title-text pt-2 text-center">Faça seu Login</h1>
+
+    <form class="global-form" action="{{form_verification}}" method="POST" enctype="application/x-www-form-urlencoded">
+        {% csrf_token %}
+        {% for field in login_form %}
+            {{field}}
+
+            {{ field.errors }}
+        {% endfor %}
+        <button class="button-form-solid full" type="submit"><i class="fa-solid fa-key"></i> Login</button>    
+    </form>
+    
+    {% include 'parts/messages.html' %}
+    
+    <div class="link-registration">Não tem cadastro?<a href="{% url 'authentication:register' %}">REGISTRE-SE</a></div>
+    
+    <div class="link-registration">ou <a href="{% url 'reset_password' %}">ESQUECEU A SENHA</a></div>
+</div>
+
+<div class="grid-navigation">
+    <a class="navigation-button" href="{% url 'home:index' %}"><i class="fa-solid fa-circle-arrow-left"></i></a> 
+</div>
+{% endblock %}

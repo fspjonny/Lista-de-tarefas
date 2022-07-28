@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}Tarefas - Não deixe de fazê-las{% endblock %}
+
+{% block navbar %}{% include 'parts/navbar.html' %}{% endblock %}
+{% block header %}{% include 'parts/header.html' %}{% endblock %}
+
+{% block main %}
+<!-- sobre o projeto -->
+<section class="page-section bg-primary bg-about" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+            <h2 class="text-white mt-0">Simplesmente fácil!</h2>
+            <hr class="divider divider-light" />
+            <p class="text-white-75 mb-4">Ao digitar uma tarefa, ela estará associada a data em que foi lançada.
+                E quando você cumprir sua tarefa, basta marcar como concluída e você verá o status diferente das 
+                demais tarefas que ainda precisam ser cumpridas.</p>
+                <p class="text-white-75 mb-4">E se precisar reabrir a mesma tarefa, você pode simplesmente desmarcar ela como
+                concluída, e ela estará disponível novamente com data atualizada. Assim você poderá sempre ter acesso as
+                suas tarefas atuais e poderá cumprir as tarefas em outro momento sem esquecer de nenhuma delas.</p>
+                <a class="btn btn-light btn-xl" href="{% url 'todo:list' %}">Começe agora!</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio-->
+<section class="page-section text-white bg-portifolio"  id="portfolio">
+    <div class="social-midia">
+        <div class="p-5 text-center">
+            <h2 class="mb-3">Meu GitHub</h2>
+            <a class="display-1" href="https://github.com/fspjonny/django_tailwind" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="p-5 text-center">
+            <h2 class="mb-3">Meu Linkedin</h2>
+            <a class="display-1" href="https://www.linkedin.com/in/fabiosilvapedro19071976/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</section>
+<!-- Contato -->
+<section class="page-section form-contact" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0 title-text">Entre em contato!</h2>
+                <hr class="divider" />
+                <p class="text-muted mb-5">Se gostou do meu trabalho e achou útil este pequeno projeto, fique a vontade para 
+                    continuar a usá-lo ou então quer saber como eu o fiz, você poderá baixar o código no meu 
+                    <a href="https://github.com/fspjonny/django_tailwind" target="_blank">Github</a></p>
+                    <span class="title-text">Envie seus elogios ou dúvidas, que respondo em breve.</span>
+            </div>
+        </div>
+        <div class="justify-content-center">
+            {% if messages %}
+                {% for message in messages %}
+                <p class="text-primary text-center">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+            <form class="global-form" action="{{contact}}" method="POST" enctype="application/x-www-form-urlencoded">
+                {% csrf_token %}
+                {% for field in form_contact %}
+                    {{field}}
+                {% endfor %}
+                <button class="button-form full" type="submit"><i class="fa-solid fa-envelope-circle-check"></i> Enviar</button>
+            </form>            
+        </div>
+    </div>
+</section>
+{% endblock %}
+

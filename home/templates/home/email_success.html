@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="6;url={% url 'home:index' %}">
+    <title>E-mail enviado</title>
+    <style>
+        html {
+            background: linear-gradient(to bottom, rgba(39, 63, 110, 0.8) 100%, rgba(27, 152, 224, 0.8) 0%),
+            url("{% static 'assets/img/sended_mail.png' %}");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+            height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.445);
+            text-shadow: -1px -1px rgba(39, 63, 110, 1);
+            text-transform: uppercase;
+        }
+
+        h3 {
+            margin-top: 22px;
+            text-align: center;
+            font-family: Arial;
+            color: rgba(0, 204, 255, 0.856);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        a {
+            width: 20%;
+            margin-top: 5%;
+            text-align: center;
+            box-shadow: 1px 1px rgba(55, 55, 55, 0.5);
+            background-color: rgba(27, 152, 224, 0.4);
+            border-radius: 28px;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 18px;
+            padding: 16px 76px;
+            text-decoration: none;
+            transition: ease-in-out 0.50s;
+        }
+
+        a:hover {
+            background-color: rgba(29, 5, 165, 0.3);
+        }
+
+        a:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .container {
+            padding: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>E-mail enviado com sucesso!</h1>
+        <h3>Obrigado por enviar uma mensagem!,<br>
+            <p>em breve retornarei o contato!</p>
+        </h3>
+        <a href="{% url 'home:index' %}">Página inicial</a>
+    </div>
+</body>
+
+</html>

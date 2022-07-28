@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Tarefas | Configurações
+{% endblock %}
+
+
+{% block main %}
+<div class="painel-user-configs">
+    <div class="body-fields">
+
+        <h2 class="update-text">Configurações da Conta</h2>
+        <p class="help-text">Altere os dados básicos de sua conta e altere sua senha de acesso aqui.</p>
+        
+        <hr class="divisor">
+            <span class="update-text">Usuário:</span>
+            <span class="update-user-label">{{request.user.email}}</span><br>
+        <hr class="divisor">
+
+        {% include 'parts/messages.html' %}
+
+        <form class="update-form-user" action="{{form_action}}" method="POST" enctype="application/x-www-form-urlencoded">
+            {% csrf_token %}
+            {% for field in form_user %}
+            
+            {{field.label}}
+            
+            {{field}}
+            
+            {{ field.errors }}
+            {% endfor %}
+            <button class="button-form-solid full" type="submit"><i class="fa-solid fa-floppy-disk"></i> Salvar alterações</button>    
+        </form>
+    </div>
+</div>
+
+<div class="grid-navigation">
+    <a class="navigation-button" href="{% url 'todo:list' %}"><i class="fa-solid fa-circle-arrow-left"></i></a> 
+</div>
+{% endblock %}
