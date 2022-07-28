@@ -1,1 +1,1 @@
-web: gunicorn core.settings.wsgi --log-file -
+web: gunicorn SITE_BOOTSTRAP.wsgi --log-file -
