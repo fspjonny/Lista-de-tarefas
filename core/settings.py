@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import dj_database_url
 import django_on_heroku
 from decouple import Csv, config
 from django.contrib.messages import constants
@@ -71,12 +72,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config('ENGINE'),
-        'NAME': config('NAME'), 
-        'USER': config('USER'), 
-        'PASSWORD': config('PASSWORD'),
-        'HOST': config('HOST', 'localhost'), 
-        'PORT': config('PORT'),
+        'ENGINE':config('ENGINE'),
+        'NAME':config('NAME'), 
+        'USER':config('USER'), 
+        'PASSWORD':config('PASSWORD'),
+        'HOST':config('HOST', 'localhost'), 
+        'PORT':config('PORT'),
     }
 }
 
