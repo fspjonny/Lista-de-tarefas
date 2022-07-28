@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import dj_database_url
 import django_on_heroku
 from decouple import Csv, config
 from django.contrib.messages import constants
