@@ -6,4 +6,8 @@ Para o Backend usei o **PostgreSQL**, usei também um pouco de **Javascript** na
 controlar efeitos de rolagem, suavização, controle de navegação e avisos da página de tarefas.</br>
 
 ###### Para ver este App funcionando na internet acesse: https://fabio-lista-de-tarefas.herokuapp.com/
-![Home de Tarefas App](https://i.imgur.com/Qo1hQzo.png)
+
+<div align="center">
+<img height="455" src="https://i.imgur.com/Qo1hQzo.png" alt="Tela Index">
+<img height="455" src="https://i.imgur.com/8JguufW.png" alt="Tela Tarefas">
+</div>
