@@ -40,7 +40,6 @@
         }
 
         a {
-            width: 20%;
             margin-top: 5%;
             text-align: center;
             box-shadow: 1px 1px rgba(55, 55, 55, 0.5);
@@ -54,6 +53,16 @@
             padding: 16px 76px;
             text-decoration: none;
             transition: ease-in-out 0.50s;
+        }
+
+        @media (max-width:300px) {
+            a {
+                padding: 8px 76px;
+                font-size: 18px;
+                display: inline;
+                border-radius: 40px;
+            }
+            
         }
 
         a:hover {
