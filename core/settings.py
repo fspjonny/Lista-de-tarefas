@@ -146,11 +146,9 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_AGE = 18000 # Expira em 5 horas
 
 #Messageria constant flags
-MESSAGE_TAGS={
-    constants.DEBUG:'msg-debug',
+MESSAGE_TAGS = {
     constants.SUCCESS:'msg-success',
     constants.ERROR:'msg-error',
-    constants.INFO:'msg-info',
     constants.WARNING:'msg-warning',
 }
 

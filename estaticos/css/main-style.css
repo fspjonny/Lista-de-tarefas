@@ -487,17 +487,17 @@ background-color: var(--bg-gray);
     padding: 8px;
     border-radius: 10px;
 }
-.error{
+.msg-error{
     background-color: var(--color-red-500);
     color: var(--color-red-100);
     border: 2px solid var(--color-red-800);
 }
-.success{
+.msg-success{
     background-color: var(--color-green-700);
     color: var(--color-green-200);
     border: 2px solid var(--color-green-900);
 }
-.warning{
+.msg-warning{
     background-color: var(--color-orange-500);
     color: var(--color-orange-100);
     border: 2px solid var(--color-orange-600);
