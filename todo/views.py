@@ -12,7 +12,7 @@ from .models import ToDoModel
 def list(request):
     lista_tarefas = ToDoModel.objects.filter(
         autor=request.user.id
-        ).order_by('-data_de_criacao')
+        ).order_by('concluida','-data_de_criacao')
 
     data_in_session = request.session.get('register_form_data', None)    
     form = ToDoForm(data_in_session)
