@@ -785,7 +785,7 @@ header.masthead h1, header.masthead .h1 {
 @media (max-width:600px){
   .user-settings i{
     font-size:1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.16rem;
   }
   .user-settings p{
     display: none;
