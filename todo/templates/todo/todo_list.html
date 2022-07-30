@@ -28,7 +28,7 @@
         <form action="{% url 'authentication:logout'%}" method="post">
         {% csrf_token %}
         <input type="hidden" name="username" value="{{request.user.username}}">
-        <button type="submit" class="logout-plaintext-buttom">Sair <i class="fa-solid fa-person-walking-arrow-right"></i></button>
+        <button type="submit" class="logout-plaintext-buttom"><span>Sair</span><i class="fa-solid fa-person-walking-arrow-right"></i></button>
         </form>
     </div>
 

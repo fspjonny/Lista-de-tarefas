@@ -40,6 +40,12 @@
     --color-gray-medium-0:#919191;
     --color-gray-medium-1:#61677C;
     --color-blue:#0d6efd;
+    --color-blue-0:#233462;
+    --color-blue-1:#273867;
+    --color-blue-2:#2b3c6d;
+    --color-blue-3:#2e4172;
+    --color-blue-4:#324578;
+    --color-blue-5:#1c3477;
     --color-opacity-blue:rgba(27, 152, 224, 0.8);
     --color-opacity-blue-0:rgba(39, 63, 110, 0.8);
     --color-shadow:#BABECC;
@@ -47,9 +53,6 @@
     --color-black:#000;
     --color-brown:#513612;
     --color-yellow: #ffff00;
-    --color-violet-0: #6b6ae2;
-    --color-indigo-1: #4d4cca;
-    --color-indigo-2: #113148;
     
     /* Font Reference User */
     --font-Courier: 'Courier', sans-serif;
@@ -141,12 +144,13 @@ ul {
     height: 40px;
     cursor: pointer;
     padding: 10px;
-    background: linear-gradient(to right, var(--color-indigo-1), var(--color-violet-0));
+    background: linear-gradient(to right, var(--color-blue-4), var(--color-blue-2), var(--color-blue-0));
     font-size: 0.85rem;
     font-weight: 400;
     font-family: var(--font-roboto);
     color: var(--color-white);
     text-transform: uppercase;
+    border: 1px solid var(--color-blue-5);
     -webkit-border-top-right-radius: 20px;
     -webkit-border-bottom-right-radius: 20px;
     -moz-border-radius-topright: 20px;
@@ -156,7 +160,7 @@ ul {
 }
   
 .form-adding-list button:hover {
-    background: linear-gradient(to left, var(--color-indigo-1), var(--color-violet-0));
+  background: linear-gradient(to right, var(--color-blue-0), var(--color-blue-2), var(--color-blue-4));
 }
   
 @media (max-width: 399px) {
@@ -736,45 +740,58 @@ header.masthead h1, header.masthead .h1 {
     font-family: var(--font-roboto);
 }
 
-.user-settings{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: 0;
-    left: 10px;
-    text-align: center;
-    font-family: var(--font-roboto);
-    color: var(--color-white);
-}
-.user-settings i{
-    text-align: left;
-    text-decoration: none;
-    color: var(--color-white);
-    font-size: 1rem;  
-}
-.user-settings a{
-    text-align: left;
-    text-decoration: none;
-    color: var(--color-white);
-    font-size: 1rem;  
-}
-  
 .logged-user{
-    text-align: right;
-    font-family: var(--font-roboto);
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    line-height: 0.3em;
+  text-align: right;
+  font-family: var(--font-roboto);
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  line-height: 0.3em;
 }
 .logged-user p{
-    font-weight: bold;
-    font-size: 0.875rem;
+  font-weight: bold;
+  font-size: 0.875rem;
 }
 .logged-user p:nth-child(2){
-    color:var(--color-yellow);
+  color:var(--color-yellow);
 }
-  
+
+
+.user-settings{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 10px;
+  text-align: center;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+}
+.user-settings a{
+  text-align: left;
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1rem;  
+}
+.user-settings i{
+  text-align: left;
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 1.2rem;  
+}
+.user-settings p{
+  font-size: 1rem;
+}
+@media (max-width:600px){
+  .user-settings i{
+    font-size:1.8rem;
+    margin-bottom: 1rem;
+  }
+  .user-settings p{
+    display: none;
+  }
+}
+
 .logout-user{
     position: absolute;
     bottom: 15px;
@@ -786,12 +803,23 @@ header.masthead h1, header.masthead .h1 {
 .logout-user button{
     text-decoration: none;
     color: var(--color-white);
-    font-size: 1rem;
+    font-size: 1.1rem;
+}
+.logout-user span{
+  padding-right: 5px;
 }
 .logout-user i{
     text-decoration: none;
     color: var(--color-white);
     font-size: 1.4rem;
+}
+@media (max-width:600px){
+  .logout-user i{
+    font-size:2.1rem;
+  }
+  .logout-user span{
+    display: none;
+  }  
 }
 
 .to-top{
@@ -832,7 +860,7 @@ header.masthead h1, header.masthead .h1 {
     align-content: center;
     align-items: center;
     height:200px;
-    background-color: var(--color-indigo-2);
+    background: linear-gradient(to bottom, var(--color-blue-0), var(--color-blue-1), var(--color-blue-2), var(--color-blue-3), var(--color-blue-4));
     color: var(--color-white);  
     padding: 20px;
 }
@@ -895,8 +923,8 @@ header.masthead h1, header.masthead .h1 {
   
 .list-todo{
     width: 100%;
-    background-color: var(--bg-gray-3);
-    padding-top: 2px;
+    background-color: var(--bg-gray-5);
+      padding-top: 2px;
 }
 .list-grid{
     min-height: 600px;
