@@ -53,4 +53,10 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     })
 
+
+    // Atualiza o ano no rodapé automaticamente
+    const ano_no_rodape = document.getElementById("ano");
+    const ano_corrente= new Date();
+    ano_no_rodape.innerHTML = ano_corrente.getFullYear();
+
 });
