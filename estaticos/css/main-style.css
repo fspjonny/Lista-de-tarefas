@@ -701,7 +701,7 @@ header.masthead h1, header.masthead .h1 {
   background-position: left;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: contain;
 }
 
 .bg-portifolio {
