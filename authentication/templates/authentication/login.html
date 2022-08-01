@@ -21,9 +21,9 @@ Tarefas | Login
     
     {% include 'parts/messages.html' %}
     
-    <div class="link-registration">Não tem cadastro?<a href="{% url 'authentication:register' %}">REGISTRE-SE</a></div>
+    <div class="link-registration">Não tenho uma conta<a href="{% url 'authentication:register' %}">Iniciar</a></div>
     
-    <div class="link-registration">ou <a href="{% url 'reset_password' %}">ESQUECEU A SENHA</a></div>
+    <div class="link-registration"><a href="{% url 'reset_password' %}">Esqueceu sua senha?</a></div>
 </div>
 
 <div class="grid-navigation">
