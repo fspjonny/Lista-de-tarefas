@@ -695,7 +695,7 @@ header.masthead h1, header.masthead .h1 {
 
 .bg-about {
   height: 50rem;
-  padding-top:10rem;
+  padding-top:8rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: linear-gradient(to bottom, var(--color-opacity-orange) 0%, var(--color-opacity-orange-0) 100%), url("../assets/img/bg-woman.png");
   background-position: left;
