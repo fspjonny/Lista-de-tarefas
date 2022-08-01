@@ -10,4 +10,8 @@ controlar efeitos de rolagem, suavização, controle de navegação e avisos da 
 <div align="center">
 <img height="455" src="https://i.imgur.com/Qo1hQzo.png" alt="Tela Index">
 <img height="455" src="https://i.imgur.com/8JguufW.png" alt="Tela Tarefas">
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> b01af83cf292d050e9cf283e79a468474664dfb9
