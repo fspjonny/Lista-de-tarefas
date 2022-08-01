@@ -271,6 +271,8 @@ ul {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px var(--color-white);
   font-weight: bold;
+  font-size: 2.3rem;
+  padding-bottom: 3rem;
 }
 
 .global-form {
@@ -427,11 +429,10 @@ background-color: var(--bg-gray);
   margin: 10px;
   font-family: var(--font-roboto);
   font-weight:lighter;
-  font-size: 0.9rem;
-  color: var(--color-shadow);
+  font-size: 1rem;
+  color: var(--bg-gray-dark-1);
   text-transform: uppercase;
   text-align: left;
-  text-shadow: 1px -1px var(--bg-gray-dark), 1px 1px var(--color-white);
 }
 
 .list-text-left{
@@ -444,7 +445,7 @@ background-color: var(--bg-gray);
 .presentation-text{
   color: var(--bg-gray-dark-1);
   font-size: 1.2em;
-  font-family: var(--font-Courier);
+  font-family: var(--font-roboto);
   text-transform: uppercase;
   text-align: center;
 }
@@ -457,22 +458,141 @@ background-color: var(--bg-gray);
 
 .presentation-title{
   color: var(--bg-gray-dark-1);
-  font-family: var(--font-Courier);
+  font-family: var(--font-roboto);
   font-weight: bold;
   text-transform: uppercase;  
 }
 
-.recover-account{
-  /* background-color: var(--bg-gray); */
+/* Recover Container */
+.recover-account-container{
   height: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* First Page recover Request form Mail */
+.recover-account-form-reset{
+  order:1;
+  width: 50%;
   padding-top: 5%;
-  background: linear-gradient(to bottom, var(--color-opacity-gray-0) 0%, var(--color-opacity-gray-1) 100%), url("../assets/img/texture.png");
+  background: var(--bg-gray);
+}
+.recover-account-reset{
+  order:2;
+  width: 50%;
+  background: url("../assets/img/pass-recover.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+/* Second Page recover Done Message Confirm */
+.recover-account-form-reset-done{
+  order:1;
+  width: 50%;
+  padding-top: 5%;
+  background: var(--bg-gray);
+}
+.recover-account-reset-done{
+  order:2;
+  width: 50%;
+  background: url("../assets/img/recover-done.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+/* Third Page recover Form New Pass */
+.recover-account-form-pass{
+  order:1;
+  width: 50%;
+  padding-top: 5%;
+  background: var(--bg-gray);
+}
+.recover-account-reset-pass{
+  order:2;
+  width: 50%;
+  background: url("../assets/img/recover-form.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+/* Fourth Page */
+.recover-account-form-pass-done{
+  order:1;
+  width: 50%;
+  padding-top: 5%;
+  background: var(--bg-gray);  
+}
+.recover-account-reset-pass-done{
+  order:2;
+  width: 50%;
+  background: url("../assets/img/recover-success.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;  
 }
 
+
+@media (max-width: 700px) {
+  .recover-account-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+  }
+  .recover-account-form-reset{
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to bottom, var(--color-opacity-gray-0) 0%, var(--color-opacity-gray-1) 100%), url("../assets/img/pass-recover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .recover-account-reset{
+    display: none;
+  }
+  .recover-account-form-reset-done{
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to bottom, var(--color-opacity-gray-0) 0%, var(--color-opacity-gray-1) 100%), url("../assets/img/recover-done.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .recover-account-reset-done{
+    display: none;
+  }
+
+  .recover-account-form-pass{
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to bottom, var(--color-opacity-gray-0) 0%, var(--color-opacity-gray-1) 100%), url("../assets/img/recover-form.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .recover-account-reset-pass{
+    display: none;
+  }
+  .recover-account-reset-pass-done{
+    display: none;
+  }  
+  .recover-account-form-pass-done{
+    width: 100%;
+    height: 800px;
+    background: linear-gradient(to bottom, var(--color-opacity-gray-0) 0%, var(--color-opacity-gray-1) 100%), url("../assets/img/recover-success.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;    
+  }
+}
 
 
 /* Configurações de Menssageria do App */
