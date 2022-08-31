@@ -8,10 +8,5 @@ controlar efeitos de rolagem, suavização, controle de navegação e avisos da 
 ###### Para ver este App funcionando na internet acesse: https://fabio-lista-de-tarefas.herokuapp.com/
 
 <div align="center">
-<img height="455" src="https://i.imgur.com/Qo1hQzo.png" alt="Tela Index">
+<img height="455" src="https://i.imgur.com/WJgaLV1.png" alt="Tela Index">
 <img height="455" src="https://i.imgur.com/8JguufW.png" alt="Tela Tarefas">
-<<<<<<< HEAD
-</div>
-=======
-</div>
->>>>>>> b01af83cf292d050e9cf283e79a468474664dfb9
