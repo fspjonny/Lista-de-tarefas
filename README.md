@@ -33,4 +33,8 @@ cd lista-de-tarefas<br>
 python -m venv venv<br>
 pip install -r requirements.txt<br>
 python manage.py migrate<br>
+<<<<<<< HEAD
 python manage.py runserver<br>
+=======
+python manage.py runserver<br>
+>>>>>>> refs/remotes/origin/main
