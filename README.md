@@ -5,7 +5,6 @@ e na maior parte modifiquei as classes nativas via CSS para personalizar melhor 
 Para o Backend usei o **PostgreSQL**, usei também um pouco de **Javascript** na página inicial para 
 controlar efeitos de rolagem, suavização, controle de navegação e avisos da página de tarefas.</br>
 
-###### Para ver este App funcionando na internet acesse: https://fabio-lista-de-tarefas.herokuapp.com/
 
 <div align="center">
 <img height="455" src="https://i.imgur.com/WJgaLV1.png" alt="Tela Index">
