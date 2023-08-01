@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import django_on_heroku
 from decouple import Csv, config
 from django.contrib.messages import constants
 
@@ -71,12 +70,8 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':config('ENGINE'),
-        'NAME':config('NAME'), 
-        'USER':config('USER'), 
-        'PASSWORD':config('PASSWORD'),
-        'HOST':config('HOST', 'localhost'), 
-        'PORT':config('PORT'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -151,5 +146,3 @@ MESSAGE_TAGS = {
     constants.ERROR:'msg-error',
     constants.WARNING:'msg-warning',
 }
-
-django_on_heroku.settings(locals())
