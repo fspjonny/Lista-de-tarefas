@@ -6,7 +6,7 @@ e na maior parte modifiquei as classes nativas via CSS para personalizar melhor 
 
 **Para esta versão do aplicativo, tive somente que modificar o banco de dados(Originalmente PostreSQL) para o MySQL por causa do local de hospedagem escolhido(PythonAnywhere não dá suporte grátis ao PostgreSQL), uma vez que o Heroku também acabou com a hospedagem gratuita com PostgreSQL.**
 
-###### Para ver esta APP funcionando na internet acesse: Em Breve(mudando o provedor)
+###### Para ver esta APP funcionando na internet acesse: http://fspjonny.pythonanywhere.com/
 
 <div align="center">
 <img height="455" src="https://i.imgur.com/WJgaLV1.png" alt="Tela Index">
